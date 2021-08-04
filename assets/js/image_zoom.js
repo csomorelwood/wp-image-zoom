@@ -13,25 +13,27 @@ let zoomSize = 150
 document.addEventListener("DOMContentLoaded", ()=>{
   console.log('JS Image Zoom By Csömör loaded ...')
   let modAll = document.querySelectorAll(".csomor-image-zoom")
-  Array.prototype.forEach.call(modAll, (m)=>{
-    m.style.backgroundImage = 'url(' + m.querySelector('img').src + ')'
-    m.addEventListener('click', e=>{
-      if(zoomSize < 300){
-        zoomSize += 50
-      }
-      else{
-        zoomSize = 150
-      }
+  if(modAll){
+    Array.prototype.forEach.call(modAll, (m)=>{
+      m.style.backgroundImage = 'url(' + m.querySelector('img').src + ')'
+      m.addEventListener('click', e=>{
+        if(zoomSize < 300){
+          zoomSize += 50
+        }
+        else{
+          zoomSize = 150
+        }
+      })
+      m.addEventListener('mousemove', e=>{
+        m.querySelector('img').style.opacity = 0
+        zoom(e)
+      })
+      m.addEventListener('mouseleave', e=>{
+        m.querySelector('img').style.opacity = 1
+        normalize(e)
+      })
     })
-    m.addEventListener('mousemove', e=>{
-      m.querySelector('img').style.opacity = 0
-      zoom(e)
-    })
-    m.addEventListener('mouseleave', e=>{
-      m.querySelector('img').style.opacity = 1
-      normalize(e)
-    })
-  })
+  }
 })
 
 /*
