@@ -7,6 +7,6 @@ You only need to add "csomor-image-zoom" class to the image wrapper, and you wil
 
 If this plugin helped your life, you can donate me on PayPal. Many thanks :)
 
-[<img src="https://github.com/csomorelwood/chocolate-rain/blob/master/assets/images/donate.png">](https://paypal.me/csomorelwood)
+[<img src="https://github.com/csomorelwood/chocolate-rain/blob/master/assets/images/donate.png">](https://www.paypal.com/donate/?hosted_button_id=QGCFARZFB5H36)
 
 Thanks for downloading! :D
